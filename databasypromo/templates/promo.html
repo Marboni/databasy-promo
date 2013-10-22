@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Databasy.com</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='promo/libs/bootstrap/css/bootstrap.min.css') }}"
+          media="screen">
+    <link rel="stylesheet" href="{{ url_for('static', filename='promo/src/css/application.css') }}"
+          media="screen">
+
+    <script src="{{ url_for('static', filename='promo/libs/jquery-1.8.1.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='promo/libs/bootstrap/js/bootstrap.min.js') }}"></script>
+    <script src="{{ url_for('static', filename='promo/src/js/application.js') }}"></script>
+</head>
+<body>
+<div class="header">
+    <div class="navbar navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <a class="brand" href="#">Databasy.com</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="content">
+    <div class="container">
+        <h1 id="productDescription" class="text-center">
+            Databasy.com will help developers to design,
+            <br/>
+            discuss and maintain databases cooperatively.</h1>
+
+
+        <div class="row">
+            <div id="betaRequestPanel" class="span12" style="position: relative;">
+                <p class="text-center lead">Help us to make a great product!</p>
+                <form id="betaRequest">
+                    <fieldset>
+                        <div id="emailWrapper" class="control-group">
+                            <input id="email" type="text" value="" placeholder="Your email" name="email">
+                        </div>
+                        <button type="submit" class="btn btn-info">Let me know about beta release!</button>
+                    </fieldset>
+                </form>
+
+                <img class="postgreSQLSupport" src="{{ url_for('static', filename='promo/img/badge.png') }}"/>
+            </div>
+        </div>
+
+        <br/>
+
+        <div class="row">
+
+            <div class="feature span6">
+                <div class="thumb">
+                    <img src="{{ url_for('static', filename='promo/img/cloud.png') }}"/>
+                </div>
+                <div class="content">
+                    <h5>No installation needed</h5>
+
+                    <p>Your models are safely stored in a cloud and available in any moment from any place.</p>
+                </div>
+            </div>
+            <div class="feature span6">
+                <div class="thumb">
+                    <img src="{{ url_for('static', filename='promo/img/ui.png') }}"/>
+                </div>
+                <div class="content">
+                    <h5>Friendly interface</h5>
+
+                    <p>Simple and clear UI makes developer's life better.</p>
+                </div>
+            </div>
+        </div>
+
+        <br/>
+
+        <div class="row">
+            <div class="feature span6">
+                <div class="thumb">
+                    <img src="{{ url_for('static', filename='promo/img/eye.png') }}"/>
+                </div>
+                <div class="content">
+                    <h5>Presentation mode</h5>
+
+                    <p>In this mode you can keep track of modifications made by user that is currently editing the model.</p>
+                </div>
+            </div>
+            <div class="feature span6">
+                <div class="thumb">
+                    <img src="{{ url_for('static', filename='promo/img/sync.png') }}"/>
+                </div>
+                <div class="content">
+                    <h5>Real-time synchronization</h5>
+
+                    <p>You will see changes made by another user in a second, so model in your browser is always up-to-date.</p>
+                </div>
+            </div>
+        </div>
+
+        <br/>
+
+        <div class="row">
+            <div class="feature span6">
+                <div class="thumb">
+                    <img src="{{ url_for('static', filename='promo/img/comments.png') }}"/>
+                </div>
+                <div class="content">
+                    <h5>Comments and discussions</h5>
+
+                    <p>You can add a description or start a discussion about tables, views etc.</p>
+                </div>
+            </div>
+            <div class="feature span6">
+                <div class="thumb">
+                    <img src="{{ url_for('static', filename='promo/img/sql.png') }}"/>
+                </div>
+                <div class="content">
+                    <h5>DDL generation</h5>
+
+                    <p>Generate scripts to create database schema, check its correctness and start to work with your
+                        DB!</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="footer">
+    <hr/>
+    <p class="text-center muted">&copy; 2013 Databasy.com</p>
+</div>
+
+</body>
+</html>

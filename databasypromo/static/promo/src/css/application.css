@@ -1,0 +1,60 @@
+body {
+    padding: 60px;
+}
+
+#productDescription {
+    margin: 0.5em 0 1em;
+}
+
+#betaRequestPanel {
+    padding: 10px 0;
+    border-radius: 6px;
+    border: 1px dashed #626262;
+}
+
+#betaRequest p {
+    margin-bottom: 10px;
+}
+
+#betaRequest input {
+    display: block;
+    margin: 0 305px;
+    width: 320px;
+}
+
+#betaRequest .control-group {
+    margin: 0;
+}
+
+#betaRequest button {
+    width: 240px;
+    margin: 15px 345px 10px;
+}
+
+.feature {
+    overflow: auto;
+}
+
+.feature .thumb {
+    float: left
+}
+
+.feature .thumb img {
+    display: block;
+}
+
+.feature .content {
+    margin-left: 138px
+}
+
+.feature .content h5 {
+    margin: 0 0 5px;
+}
+
+.postgreSQLSupport {
+    position: absolute;
+    width: 128px;
+    height: 128px;
+    top: -40px;
+    right: -40px;
+}
