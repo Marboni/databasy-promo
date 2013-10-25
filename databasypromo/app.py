@@ -1,12 +1,22 @@
 from urlparse import urlparse
 from flask import Flask, render_template, request
 import sqlite3
+import os
 from werkzeug.exceptions import BadRequest
 
+WORKING_DIR = os.path.join(os.path.dirname(__file__), '..')
+DB_FILE = os.path.join(WORKING_DIR, 'databasypromo.db')
+LOG_FILE = os.path.join(WORKING_DIR, 'databasypromo.log')
+
 app = Flask(__name__)
+if not app.debug:
+    import logging
+    file_handler = logging.FileHandler(LOG_FILE)
+    file_handler.setLevel(logging.WARNING)
+    app.logger.addHandler(file_handler)
 
 def connect():
-    return sqlite3.connect(app.config['db_path'])
+    return sqlite3.connect(DB_FILE)
 
 @app.route('/', methods=['GET'])
 def promo():
@@ -33,6 +43,4 @@ def betaRequest():
     return ''
 
 if __name__ == '__main__':
-    with open('db.path') as dbp:
-        app.config['db_path'] = dbp.readline().strip()
     app.run()
